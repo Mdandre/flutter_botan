@@ -35,6 +35,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   path_provider: ^2.0.10
+  ffi: ^1.2.1
+  ffigen: ^6.0.0
+
+ffigen:
+  name: 'BotanFFI'
+  description: 'Written for the FFI article'
+  output: 'lib/ffi/generated_bindings.dart'
+  headers:
+    entry-points:  
+    - '/Users/marco/Development/BRANDTRACK/flutter_botan/lib/library/botan/amalgamation_darwin/botan_all.h'
 
 dev_dependencies:
   flutter_test:
