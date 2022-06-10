@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -31,6 +32,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String musicPath =
+      "/Users/marco/Library/Containers/fm.brandtrack.Player/Data/Library/Application Support/Brandtrack/Brandtrack Player/music/0a7c6f26b0dbd2fa73404f052cfc23820de477bf";
+
+  final dylib = DynamicLibrary.open("/Users/marco/Development/BRANDTRACK/flutter_botan/lib/library/botan/amalgamation_darwin/botan_all.cpp");
   final textControllerInput = TextEditingController();
   var textControllerOutput = TextEditingController();
   Future<Directory?>? _appDocumentsDirectory;
